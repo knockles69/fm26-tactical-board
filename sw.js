@@ -19,6 +19,7 @@ const urlsToCache = [
   './src/components/FormationLayout.tsx',
   // CDNs
   'https://cdn.tailwindcss.com',
+  'https://unpkg.com/@babel/standalone/babel.min.js',
   'https://aistudiocdn.com/react@^19.2.0',
   'https://aistudiocdn.com/react-dom@^19.2.0/client',
   // Icons for manifest

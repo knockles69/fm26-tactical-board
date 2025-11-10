@@ -22,20 +22,23 @@
         overflow: hidden;
       }
     </style>
-<script type="importmap">
-{
-  "imports": {
-    "react/": "https://aistudiocdn.com/react@^19.2.0/",
-    "react": "https://aistudiocdn.com/react@^19.2.0",
-    "react-dom/": "https://aistudiocdn.com/react-dom@^19.2.0/"
-  }
-}
-</script>
+    <!-- Babel for in-browser JSX/TSX compilation -->
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+    <script type="importmap">
+    {
+      "imports": {
+        "react/": "https://aistudiocdn.com/react@^19.2.0/",
+        "react": "https://aistudiocdn.com/react@^19.2.0",
+        "react-dom/": "https://aistudiocdn.com/react-dom@^19.2.0/"
+      }
+    }
+    </script>
 <link rel="stylesheet" href="/index.css">
 </head>
 <body class="bg-slate-900 text-slate-100">
     <div id="root"></div>
-    <script type="module" src="./src/index.tsx"></script>
+    <!-- The script type is changed to "text/babel" to be compiled by Babel -->
+    <script type="text/babel" data-type="module" src="./src/index.tsx"></script>
     <script>
       if ('serviceWorker' in navigator) {
         window.addEventListener('load', () => {
