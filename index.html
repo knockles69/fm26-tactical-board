@@ -22,23 +22,38 @@
         overflow: hidden;
       }
     </style>
+    
+    <!--
+      ** NEW, MORE RELIABLE METHOD **
+      The complex 'importmap' has been removed.
+      Instead, we are loading React and ReactDOM directly using standard script tags.
+      They will be available as global variables (window.React, window.ReactDOM),
+      which is a much more stable approach for in-browser compilation and avoids all previous conflicts.
+      Using the development builds will provide better error messages if needed.
+    -->
+    <script src="https://unpkg.com/react@18/umd/react.development.js" crossorigin></script>
+    <script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js" crossorigin></script>
+    
     <!-- Babel for in-browser JSX/TSX compilation -->
     <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
-    <script type="importmap">
-    {
-      "imports": {
-        "react/": "https://aistudiocdn.com/react@^19.2.0/",
-        "react": "https://aistudiocdn.com/react@^19.2.0",
-        "react-dom/": "https://aistudiocdn.com/react-dom@^19.2.0/"
-      }
-    }
-    </script>
+<script type="importmap">
+{
+  "imports": {
+    "react": "https://aistudiocdn.com/react@^19.2.0",
+    "react-dom/": "https://aistudiocdn.com/react-dom@^19.2.0/",
+    "react/": "https://aistudiocdn.com/react@^19.2.0/"
+  }
+}
+</script>
 <link rel="stylesheet" href="/index.css">
 </head>
 <body class="bg-slate-900 text-slate-100">
     <div id="root"></div>
-    <!-- The script type is changed to "text/babel" to be compiled by Babel -->
-    <script type="text/babel" data-type="module" src="./src/index.tsx"></script>
+    <!-- 
+      The script type is "text/babel" so Babel transpiles it.
+      The "data-presets" tell Babel to use its React and TypeScript transformers. 
+    -->
+    <script type="text/babel" data-presets="react,typescript" src="./src/index.tsx"></script>
     <script>
       if ('serviceWorker' in navigator) {
         window.addEventListener('load', () => {

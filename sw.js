@@ -1,4 +1,4 @@
-const CACHE_NAME = 'fm2026-tactical-board-v1';
+const CACHE_NAME = 'fm2026-tactical-board-v10-final-fix';
 const urlsToCache = [
   './',
   './index.html',
@@ -20,8 +20,8 @@ const urlsToCache = [
   // CDNs
   'https://cdn.tailwindcss.com',
   'https://unpkg.com/@babel/standalone/babel.min.js',
-  'https://aistudiocdn.com/react@^19.2.0',
-  'https://aistudiocdn.com/react-dom@^19.2.0/client',
+  'https://unpkg.com/react@18/umd/react.development.js',
+  'https://unpkg.com/react-dom@18/umd/react-dom.development.js',
   // Icons for manifest
   'https://img.icons8.com/color/192/football-2.png',
   'https://img.icons8.com/color/512/football-2.png'
