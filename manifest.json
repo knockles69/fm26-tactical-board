@@ -1,0 +1,24 @@
+{
+  "short_name": "FM26 Board",
+  "name": "FM2026 Tactical Board",
+  "description": "A dynamic tactical board for planning and visualizing football team squads and formations.",
+  "icons": [
+    {
+      "src": "https://img.icons8.com/color/192/football-2.png",
+      "type": "image/png",
+      "sizes": "192x192",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "https://img.icons8.com/color/512/football-2.png",
+      "type": "image/png",
+      "sizes": "512x512",
+       "purpose": "any maskable"
+    }
+  ],
+  "start_url": "./index.html",
+  "display": "standalone",
+  "scope": "./",
+  "theme_color": "#0f172a",
+  "background_color": "#0f172a"
+}

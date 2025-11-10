@@ -1,0 +1,5 @@
+{
+  "name": "FM2026 Tactical Board",
+  "description": "A dynamic tactical board for planning and visualizing football team squads and formations. Features drag-and-drop player management, multiple squad and formation support, and local data persistence.",
+  "requestFramePermissions": []
+}
