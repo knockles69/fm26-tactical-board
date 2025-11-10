@@ -24,12 +24,9 @@
     </style>
     
     <!--
-      ** NEW, MORE RELIABLE METHOD **
-      The complex 'importmap' has been removed.
-      Instead, we are loading React and ReactDOM directly using standard script tags.
-      They will be available as global variables (window.React, window.ReactDOM),
-      which is a much more stable approach for in-browser compilation and avoids all previous conflicts.
-      Using the development builds will provide better error messages if needed.
+      ** THE ONLY METHOD FOR LOADING REACT **
+      These standard script tags load React and ReactDOM as global variables.
+      This is a simple and robust approach that avoids all previous conflicts.
     -->
     <script src="https://unpkg.com/react@18/umd/react.development.js" crossorigin></script>
     <script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js" crossorigin></script>
