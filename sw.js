@@ -1,4 +1,4 @@
-const CACHE_NAME = 'fm2026-tactical-board-v11-final-clean';
+const CACHE_NAME = 'fm2026-tactical-board-v12-final-clean-fix';
 const urlsToCache = [
   './',
   './index.html',
